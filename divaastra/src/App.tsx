@@ -1,8 +1,20 @@
 import React, { useState, useEffect } from "react";
-import AppLoader from "./components/loaders/app-loader";
+import FuturisticLoader from "@divaastra/components/loaders/FuturisticLoader";
+import "@divaastra/App.scss";
+import AppRouter from "@divaastra/routes/Router";
+import { BrowserRouter } from "react-router-dom";
+import Navbar from "@divaastra/components/navbar/Navbar";
+import Footer from "@divaastra/components/footer/Footer";
+import IMAGES from "@divaastra/utils/constants/images";
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
+
+  // This ensures images are cached at startup
+  Object.values(IMAGES).forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
 
   useEffect(() => {
     // Simulate data fetching or initialization
@@ -11,12 +23,18 @@ const App: React.FC = () => {
   }, []);
 
   if (loading) {
-    return <AppLoader message="Initializing Application..." />;
+    return <FuturisticLoader />;
   }
 
   return (
-    <div className="p-5">
-      <h1 className="text-2xl font-bold">App Loaded Successfully!</h1>
+    <div className="divaastra__application-wrapper">
+      <BrowserRouter>
+        <Navbar />
+        <div className="divaastra__pages-wrapper">
+          <AppRouter />
+        </div>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 };

@@ -1,0 +1,87 @@
+$orb-size: 30px;
+$loader-size: 150px;
+$sparkle-size: 4px;
+$screen-height: 100vh;
+
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.divaastra__loader-wrapper{
+  height: 100vh;
+}
+.loader {
+  position: relative;
+  width: $loader-size;
+  height: $screen-height;
+  margin: auto;
+
+  .orb {
+    width: $orb-size;
+    height: $orb-size;
+    background: radial-gradient(circle, yellow, red);
+    border-radius: 50%;
+    @include center;
+    animation: spin 4s linear infinite, pulseColor 5s linear infinite;
+  }
+
+  .ring {
+    border: 2px solid transparent;
+    border-radius: 50%;
+    @include center;
+    animation: bounce 2.5s ease-in-out infinite;
+
+    &.ring1 {
+      width: 80px;
+      height: 80px;
+      border-color: #ffa500;
+    }
+
+    &.ring2 {
+      width: 120px;
+      height: 120px;
+      border-color: #ff69b4;
+    }
+  }
+
+  .sparkle-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    .sparkle {
+      position: absolute;
+      width: $sparkle-size;
+      height: $sparkle-size;
+      background-color: white;
+      border-radius: 50%;
+      animation: twinkle 1s ease-out;
+    }
+  }
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: scale(1) translate(-50%, -50%); }
+  50% { transform: scale(1.1) translate(-50%, -50%); }
+}
+
+@keyframes pulseColor {
+  0% { background: radial-gradient(circle, yellow, orange); }
+  50% { background: radial-gradient(circle, red, pink); }
+  100% { background: radial-gradient(circle, yellow, orange); }
+}
+
+@keyframes twinkle {
+  0% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0); }
+}

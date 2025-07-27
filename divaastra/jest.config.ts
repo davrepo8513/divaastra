@@ -22,6 +22,7 @@ const config: Config = {
   },
   moduleNameMapper: {
     "\\.(css|scss)$": "identity-obj-proxy",
+    "^@divaastra/(.*)$": "<rootDir>/src/$1"
   },
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   clearMocks: true,

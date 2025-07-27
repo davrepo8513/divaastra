@@ -1,5 +1,5 @@
 import { cleanup, render, screen } from "@testing-library/react";
-import App from "../App";
+import App from "@divaastra/App";
 import { act } from "react";
 
 jest.useFakeTimers();
@@ -19,7 +19,7 @@ describe("App Component", () => {
       act(() => {
         jest.runAllTimers();
       });
-      const element = await screen.getByText(/App Loaded Successfully/i);
+      const element = await screen.findByText(/Home Page/i);
       expect(element).toBeInTheDocument();
     });
   });
