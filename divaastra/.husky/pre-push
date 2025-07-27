@@ -1,0 +1,20 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🔍 Running build and tests before push..."
+
+# Run build
+npm run build
+if [ $? -ne 0 ]; then
+  echo "❌ Build failed. Aborting push."
+  exit 1
+fi
+
+# Run tests
+npm test
+if [ $? -ne 0 ]; then
+  echo "❌ Tests failed. Aborting push."
+  exit 1
+fi
+
+echo "✅ Build & tests passed. Proceeding with push."
