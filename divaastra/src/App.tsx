@@ -16,7 +16,7 @@ const App: React.FC = () => {
 
   return (
     <div className="p-5">
-      <h1 className="text-2xl font-bold">✅ App Loaded Successfully!</h1>
+      <h1 className="text-2xl font-bold">App Loaded Successfully!</h1>
     </div>
   );
 };
