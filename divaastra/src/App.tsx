@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import Navbar from "@divaastra/components/navbar/Navbar";
 import Footer from "@divaastra/components/footer/Footer";
 import IMAGES from "@divaastra/utils/constants/images";
+import ErrorBoundary from "@divaastra/components/errorBoundary/ErrorBoundary";
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -31,7 +32,9 @@ const App: React.FC = () => {
       <BrowserRouter>
         <Navbar />
         <div className="divaastra__pages-wrapper">
-          <AppRouter />
+          <ErrorBoundary>
+            <AppRouter />
+          </ErrorBoundary>
         </div>
         <Footer />
       </BrowserRouter>
