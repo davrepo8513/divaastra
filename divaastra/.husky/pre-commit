@@ -1,4 +1,38 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm run build && npm test
+echo "🔍 Running lint-staged on staged files..."
+npx lint-staged || exit 1
+
+echo "✅ Lint-staged passed!"
+
+echo "🏗️ Running build check..."
+npm run build || exit 1
+
+echo "🚀 Running tests before push..."
+npm run test || exit 1
+
+echo "✅ Tests passed!"
+
+
+
+
+#!/bin/sh
+# . "$(dirname "$0")/_/husky.sh"
+
+# echo "🔍 Fixing lint errors on staged files..."
+# npx lint-staged || exit 1
+
+# echo "🔍 Running ESLint on all files..."
+# npx eslint . --fix || exit 1
+
+# echo "🎨 Formatting all files with Prettier..."
+# npx prettier --write . || exit 1
+
+# echo "🏗️ Checking build..."
+# npm run build || exit 1
+
+# echo "🧪 Running tests..."
+# npm test || exit 1
+
+# echo "✅ Pre-commit checks passed!"
