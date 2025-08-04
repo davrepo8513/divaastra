@@ -8,12 +8,13 @@
     },
     "project": "./tsconfig.json"
   },
-  "plugins": ["@typescript-eslint", "react"],
+  "plugins": ["@typescript-eslint", "react", "prettier", "simple-import-sort", "sort-keys-fix"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended"
   ],
   "rules": {
     "no-restricted-imports": [
@@ -21,7 +22,25 @@
       {
         "patterns": ["../*", "./*"]
       }
-    ]
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true, // Force single quotes
+        "semi": true, // Always use semicolons
+        "tabWidth": 2, // 2-space indentation
+        "trailingComma": "es5",
+        "bracketSpacing": true,
+        "jsxSingleQuote": false // JSX with double quotes
+      }
+    ],
+    "indent": ["error", 2],
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "sort-keys-fix/sort-keys-fix": "warn",
+    "quotes": ["off"] //disables quote enforcement completely.
+    // "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }] // This enforces single quotes by default, but if you need double quotes (like for ' inside the string), it won't throw an error.
   },
   "settings": {
     "react": {
