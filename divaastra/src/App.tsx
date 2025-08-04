@@ -7,18 +7,18 @@ import Navbar from "@divaastra/components/navbar/Navbar";
 import Footer from "@divaastra/components/footer/Footer";
 import IMAGES from "@divaastra/utils/constants/images";
 import ErrorBoundary from "@divaastra/components/errorBoundary/ErrorBoundary";
+import { AuthProvider } from "@divaastra/contexts/AuthContext";
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
-  // This ensures images are cached at startup
+  // Preload images at startup
   Object.values(IMAGES).forEach((src) => {
     const img = new Image();
     img.src = src;
   });
 
   useEffect(() => {
-    // Simulate data fetching or initialization
     const timer = setTimeout(() => setLoading(false), 3000);
     return () => clearTimeout(timer);
   }, []);
@@ -29,15 +29,18 @@ const App: React.FC = () => {
 
   return (
     <div className="divaastra__application-wrapper">
-      <BrowserRouter>
-        <Navbar />
-        <div className="divaastra__pages-wrapper">
-          <ErrorBoundary>
-            <AppRouter />
-          </ErrorBoundary>
-        </div>
-        <Footer />
-      </BrowserRouter>
+      <AuthProvider>
+        {" "}
+        <BrowserRouter>
+          <Navbar />
+          <div className="divaastra__pages-wrapper">
+            <ErrorBoundary>
+              <AppRouter />
+            </ErrorBoundary>
+          </div>
+          <Footer />
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 };

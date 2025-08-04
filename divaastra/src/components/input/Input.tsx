@@ -12,6 +12,7 @@ export interface InputProps
   prefixIcon?: React.ReactNode;
   suffixIcon?: React.ReactNode;
   borderColor?: string;
+  placeHolder?: string;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -24,6 +25,7 @@ const Input: React.FC<InputProps> = ({
   prefixIcon,
   suffixIcon,
   borderColor = "border-gray-300",
+  placeholder = '',
   ...props
 }) => {
   const errorStyles = error
@@ -50,7 +52,7 @@ const Input: React.FC<InputProps> = ({
         {prefixIcon && <div className="mr-2 text-gray-500">{prefixIcon}</div>}
         <input
           {...props}
-          placeholder={props.placeholder}
+          placeholder={placeholder}
           className="flex-1 bg-transparent outline-none text-sm"
         />
         {suffixIcon && <div className="ml-2 text-gray-500">{suffixIcon}</div>}

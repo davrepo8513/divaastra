@@ -20,7 +20,7 @@ interface TypographyProps {
   color?: "primary" | "secondary" | "danger" | "success" | "gray" | "black";
   align?: "left" | "center" | "right";
   weight?: "light" | "normal" | "medium" | "semibold" | "bold";
-  as?: keyof JSX.IntrinsicElements; // custom tag
+  as?: keyof JSX.IntrinsicElements;
 }
 
 const variantStyles: Record<Variant, string> = {
