@@ -3,9 +3,9 @@
     "target": "ES2020",
     "module": "CommonJS",
     "jsx": "react-jsx",
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@divaastra/*": ["*"]
+      "@divaastra/*": ["src/*"]
     },
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,

@@ -1,6 +1,6 @@
 // components/Dialog.tsx
+import Button from "@divaastra/components/buttons/Button";
 import React from "react";
-import Button from "../buttons/Button";
 
 interface DialogProps {
   open: boolean;

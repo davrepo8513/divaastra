@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-100 text-gray-700 border-t mt-5">
-      <div className="container mx-2 px-2 py-4 flex flex-col md:flex-row items-center justify-between">
+      <div className="mx-2 px-2 py-4 flex flex-col md:flex-row items-center justify-between">
         {/* Logo / Brand */}
         <Link to="/" className="text-lg font-bold text-indigo-600">
           Divaastra

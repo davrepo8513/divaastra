@@ -1,5 +1,5 @@
+import styles from "@divaastra/components/loaders/FuturisticLoader.module.scss";
 import { useEffect, useRef } from "react";
-import styles from "./FuturisticLoader.module.scss";
 
 const FuturisticLoader = () => {
   const sparkleRef = useRef<HTMLDivElement | null>(null);
