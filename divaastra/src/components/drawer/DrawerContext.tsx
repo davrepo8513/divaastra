@@ -1,5 +1,5 @@
+import Slideout from "@divaastra/components/drawer/Slideout";
 import React, { createContext, ReactNode, useContext, useState } from "react";
-import Slideout from "./Slideout";
 
 interface DrawerContent {
   title?: string;

@@ -1,0 +1,70 @@
+@use "./variables" as *;
+
+// Flex center
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Text ellipsis
+@mixin text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Responsive font
+@mixin responsive-font($min, $max) {
+  font-size: clamp(#{$min}, 2vw, #{$max});
+}
+
+// Box shadow
+@mixin box-shadow($color: rgba(0, 0, 0, 0.1)) {
+  box-shadow: 0 2px 6px $color;
+}
+
+// Media query
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (max-width: $breakpoint-large) {
+    @content;
+  }
+}

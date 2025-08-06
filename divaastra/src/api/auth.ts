@@ -1,6 +1,6 @@
+import api from "@divaastra/api/axiosInstance";
 import { LoginPayload } from "@divaastra/types/auth/login.type";
 import { RegisterPayload } from "@divaastra/types/auth/register.type";
-import api from "./axiosInstance";
 
 export const Login = async (payload: LoginPayload) => {
   const response = await api.post("/auth/login", payload);
