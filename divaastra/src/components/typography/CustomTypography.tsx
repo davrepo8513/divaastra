@@ -85,10 +85,6 @@
 
 // export default Typography;
 
-
-
-
-
 // Usage Examples
 // tsx
 // Copy
@@ -107,9 +103,6 @@
 // <Typography variant="subtitle" align="center">
 //   Connect with the world 🌎
 // </Typography>
-
-
-
 
 // Features Added:
 // ✅ Automatically adjusts font-size for mobile & desktop using Tailwind's md: classes.

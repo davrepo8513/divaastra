@@ -3,7 +3,7 @@ import Logo from "@divaastra/assets/images/logo.png";
 
 // Export as a single object
 const IMAGES = {
-  logo: Logo
+  logo: Logo,
 };
 
 export default IMAGES;

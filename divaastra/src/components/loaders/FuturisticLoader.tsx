@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import styles from "./FuturisticLoader.module.scss";
 
 const FuturisticLoader = () => {
-  const sparkleRef = useRef<HTMLDivElement | null>(null); 
+  const sparkleRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const createSparkle = () => {
@@ -12,7 +12,7 @@ const FuturisticLoader = () => {
       sparkle.style.top = `${Math.random() * 100}%`;
       if (sparkleRef.current) {
         sparkleRef.current.appendChild(sparkle);
-      }      
+      }
       setTimeout(() => sparkle.remove(), 1000);
     };
 

@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from "react";
+import { Component, ErrorInfo, ReactNode } from "react";
 
 interface ErrorBoundaryProps {
   children: ReactNode;
@@ -29,9 +29,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
       return (
         this.props.fallback || (
           <div className="flex flex-col items-center justify-center h-screen text-center p-5">
-            <h1 className="text-2xl font-bold text-red-600 mb-2">
-              Something went wrong
-            </h1>
+            <h1 className="text-2xl font-bold text-red-600 mb-2">Something went wrong</h1>
             <p className="text-gray-600">Please try refreshing the page.</p>
           </div>
         )

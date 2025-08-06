@@ -1,5 +1,5 @@
+import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 interface DrawerProps {
   open: boolean;
@@ -8,20 +8,12 @@ interface DrawerProps {
   children: React.ReactNode;
 }
 
-const Drawer: React.FC<DrawerProps> = ({
-  open,
-  onClose,
-  position = "right",
-  children,
-}) => {
+const Drawer: React.FC<DrawerProps> = ({ open, onClose, position = "right", children }) => {
   return (
     <AnimatePresence>
       {open && (
         <>
-          <div
-            className="fixed inset-0 bg-black/40 z-40"
-            onClick={onClose}
-          ></div>
+          <div className="fixed inset-0 bg-black/40 z-40" onClick={onClose}></div>
           <motion.div
             initial={{ x: position === "right" ? "100%" : "-100%" }}
             animate={{ x: 0 }}

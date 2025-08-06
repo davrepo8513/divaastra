@@ -1,5 +1,5 @@
-import React from "react";
 import clsx from "clsx";
+import React from "react";
 
 interface CardProps {
   title?: string;
@@ -9,13 +9,7 @@ interface CardProps {
   className?: string;
 }
 
-const Card: React.FC<CardProps> = ({
-  title,
-  footer,
-  children,
-  clickable = false,
-  className,
-}) => {
+const Card: React.FC<CardProps> = ({ title, footer, children, clickable = false, className }) => {
   return (
     <div
       className={clsx(

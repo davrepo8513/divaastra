@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import "./Login.module.scss";
-import { useAuth } from "@divaastra/contexts/AuthContext";
-import { LoginPayload } from "../../types/auth/login.type";
 import Input from "@divaastra/components/input/Input";
+import { useAuth } from "@divaastra/contexts/AuthContext";
+import React, { useState } from "react";
+import { LoginPayload } from "../../types/auth/login.type";
+import "./Login.module.scss";
 
 const Login: React.FC = () => {
   const { loginUser } = useAuth();
@@ -20,24 +20,15 @@ const Login: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-64">
-      <Input
-        
-      />
-      <input
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Email"
-      />
+      <Input />
+      <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
       <input
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
       />
-      <button
-        type="submit"
-        className="bg-blue-500 text-white px-4 py-2 rounded"
-      >
+      <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
         Login
       </button>
     </form>

@@ -1,16 +1,11 @@
 import React, { useState } from "react";
 
-interface TextareaProps
-  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   maxLength?: number;
   autoResize?: boolean;
 }
 
-const Textarea: React.FC<TextareaProps> = ({
-  maxLength,
-  autoResize = true,
-  ...props
-}) => {
+const Textarea: React.FC<TextareaProps> = ({ maxLength, autoResize = true, ...props }) => {
   const [value, setValue] = useState("");
 
   return (

@@ -21,9 +21,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
             key={i}
             onClick={() => setActive(i)}
             className={`px-4 py-2 ${
-              i === active
-                ? "border-b-2 border-blue-600 text-blue-600"
-                : "text-gray-500"
+              i === active ? "border-b-2 border-blue-600 text-blue-600" : "text-gray-500"
             }`}
           >
             {tab.label}

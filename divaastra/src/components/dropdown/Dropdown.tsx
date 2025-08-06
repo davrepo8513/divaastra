@@ -38,11 +38,7 @@ const Dropdown: React.FC<DropdownProps> = ({
   return (
     <div className="flex flex-col gap-1 w-full relative">
       {label && (
-        <label
-          className={`text-sm font-medium ${
-            error ? "text-red-500" : "text-gray-700"
-          }`}
-        >
+        <label className={`text-sm font-medium ${error ? "text-red-500" : "text-gray-700"}`}>
           {label}
         </label>
       )}
@@ -54,9 +50,7 @@ const Dropdown: React.FC<DropdownProps> = ({
         onClick={() => !disabled && setIsOpen(!isOpen)}
       >
         <div className="flex items-center gap-2">
-          {showIcons && selectedOption?.icon && (
-            <span>{selectedOption.icon}</span>
-          )}
+          {showIcons && selectedOption?.icon && <span>{selectedOption.icon}</span>}
           <span className={value ? "text-gray-900" : "text-gray-400"}>
             {selectedOption?.label || placeholder}
           </span>
@@ -83,9 +77,7 @@ const Dropdown: React.FC<DropdownProps> = ({
       )}
 
       {(helperText || error) && (
-        <p
-          className={`text-xs mt-1 ${error ? "text-red-500" : "text-gray-500"}`}
-        >
+        <p className={`text-xs mt-1 ${error ? "text-red-500" : "text-gray-500"}`}>
           {error || helperText}
         </p>
       )}
@@ -94,8 +86,6 @@ const Dropdown: React.FC<DropdownProps> = ({
 };
 
 export default Dropdown;
-
-
 
 // import React, { useState } from "react";
 // import Dropdown, { DropdownOption } from "./components/common/Dropdown";

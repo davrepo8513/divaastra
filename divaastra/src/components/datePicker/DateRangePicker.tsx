@@ -30,11 +30,7 @@ const DateRangePicker: React.FC<DateRangePickerProps> = ({
   return (
     <div className="flex flex-col gap-1 w-full">
       {label && (
-        <label
-          className={`text-sm font-medium ${
-            error ? "text-red-500" : "text-gray-700"
-          }`}
-        >
+        <label className={`text-sm font-medium ${error ? "text-red-500" : "text-gray-700"}`}>
           {label}
         </label>
       )}
@@ -59,8 +55,6 @@ const DateRangePicker: React.FC<DateRangePickerProps> = ({
 };
 
 export default DateRangePicker;
-
-
 
 // import React, { useState } from "react";
 // import DateRangePicker from "@divaastra/components/common/DateRangePicker";

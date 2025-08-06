@@ -59,11 +59,7 @@ const Dropdown: React.FC<DropdownProps> = ({
   return (
     <div className="flex flex-col gap-1 w-full relative">
       {label && (
-        <label
-          className={`text-sm font-medium ${
-            error ? "text-red-500" : "text-gray-700"
-          }`}
-        >
+        <label className={`text-sm font-medium ${error ? "text-red-500" : "text-gray-700"}`}>
           {label}
         </label>
       )}
@@ -74,9 +70,7 @@ const Dropdown: React.FC<DropdownProps> = ({
         } ${error ? "border-red-500" : "border-gray-300"} ${className}`}
         onClick={() => !disabled && setIsOpen(!isOpen)}
       >
-        {multiple &&
-        Array.isArray(selectedOptions) &&
-        selectedOptions.length > 0 ? (
+        {multiple && Array.isArray(selectedOptions) && selectedOptions.length > 0 ? (
           selectedOptions.map((opt) => (
             <div
               key={opt.value}
@@ -98,9 +92,7 @@ const Dropdown: React.FC<DropdownProps> = ({
           ))
         ) : !multiple && selectedOptions && !Array.isArray(selectedOptions) ? (
           <div className="flex items-center gap-2">
-            {showIcons && selectedOptions.icon && (
-              <span>{selectedOptions.icon}</span>
-            )}
+            {showIcons && selectedOptions.icon && <span>{selectedOptions.icon}</span>}
             <span>{selectedOptions.label}</span>
           </div>
         ) : (
@@ -128,9 +120,7 @@ const Dropdown: React.FC<DropdownProps> = ({
       )}
 
       {(helperText || error) && (
-        <p
-          className={`text-xs mt-1 ${error ? "text-red-500" : "text-gray-500"}`}
-        >
+        <p className={`text-xs mt-1 ${error ? "text-red-500" : "text-gray-500"}`}>
           {error || helperText}
         </p>
       )}

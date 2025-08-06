@@ -12,9 +12,7 @@ const Stepper: React.FC<StepperProps> = ({ steps, currentStep }) => {
         <div key={step} className="flex-1 flex flex-col items-center relative">
           <div
             className={`w-8 h-8 rounded-full flex items-center justify-center z-10 ${
-              index <= currentStep
-                ? "bg-blue-600 text-white"
-                : "bg-gray-300 text-gray-600"
+              index <= currentStep ? "bg-blue-600 text-white" : "bg-gray-300 text-gray-600"
             }`}
           >
             {index + 1}
@@ -34,7 +32,5 @@ const Stepper: React.FC<StepperProps> = ({ steps, currentStep }) => {
 };
 
 export default Stepper;
-
-
 
 // <Stepper steps={["Details", "Review", "Confirm"]} currentStep={1} />;

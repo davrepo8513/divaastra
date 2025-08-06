@@ -84,9 +84,6 @@
 
 // export default DatePicker;
 
-
-
-
 // import React, { useState } from "react";
 // import DatePicker from "@divaastra/components/common/DatePicker";
 
@@ -107,9 +104,6 @@
 // };
 
 // export default ExampleSingleTime;
-
-
-
 
 // Date Range + Time Picker:
 // import React, { useState } from "react";

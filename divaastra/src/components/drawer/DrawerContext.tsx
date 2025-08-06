@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, { createContext, ReactNode, useContext, useState } from "react";
 import Slideout from "./Slideout";
 
 interface DrawerContent {
@@ -16,9 +16,7 @@ interface DrawerContextType {
 
 const DrawerContext = createContext<DrawerContextType | undefined>(undefined);
 
-export const DrawerProvider: React.FC<{ children: ReactNode }> = ({
-  children,
-}) => {
+export const DrawerProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [drawerData, setDrawerData] = useState<DrawerContent | null>(null);
 
@@ -59,10 +57,6 @@ export const useDrawer = (): DrawerContextType => {
   return context;
 };
 
-
-
-
-
 // App.tsx;
 // tsx;
 // Copy;
@@ -80,14 +74,6 @@ export const useDrawer = (): DrawerContextType => {
 // }
 
 // export default App;
-
-
-
-
-
-
-
-
 
 // Home.tsx;
 // tsx;
@@ -127,9 +113,6 @@ export const useDrawer = (): DrawerContextType => {
 // };
 
 // export default Home;
-
-
-
 
 // ✅ Now you have:
 // ✔️ A global Drawer Manager

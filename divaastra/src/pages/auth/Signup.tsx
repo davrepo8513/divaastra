@@ -37,8 +37,7 @@ const Signup: React.FC = () => {
           </button>
         </form>
         <p className="text-xs text-center text-gray-500 mt-4">
-          By signing up, you agree to our{" "}
-          <span className="font-medium">Terms</span> &{" "}
+          By signing up, you agree to our <span className="font-medium">Terms</span> &{" "}
           <span className="font-medium">Privacy Policy</span>.
         </p>
       </div>

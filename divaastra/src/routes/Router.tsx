@@ -1,9 +1,9 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Home from "@divaastra/pages/Home";
 import About from "@divaastra/pages/About";
+import Home from "@divaastra/pages/Home";
 import NotFound from "@divaastra/pages/NotFound";
 import Login from "@divaastra/pages/auth/Login";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 
 const AppRouter: React.FC = () => {
   return (

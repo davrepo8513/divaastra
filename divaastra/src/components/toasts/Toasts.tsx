@@ -11,18 +11,13 @@ interface ToastMessage {
 
 const ToastContext = createContext<any>(null);
 
-export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
+export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
 
   const showToast = (message: string, type: ToastType) => {
     const id = Date.now();
     setToasts((prev) => [...prev, { id, message, type }]);
-    setTimeout(
-      () => setToasts((prev) => prev.filter((t) => t.id !== id)),
-      3000
-    );
+    setTimeout(() => setToasts((prev) => prev.filter((t) => t.id !== id)), 3000);
   };
 
   return (
@@ -36,8 +31,8 @@ export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({
               t.type === "success"
                 ? "bg-green-500"
                 : t.type === "error"
-                ? "bg-red-500"
-                : "bg-blue-500"
+                  ? "bg-red-500"
+                  : "bg-blue-500"
             }`}
           >
             {t.message}

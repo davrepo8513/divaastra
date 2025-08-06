@@ -28,11 +28,7 @@ const DatePicker: React.FC<DatePickerProps> = ({
   return (
     <div className="flex flex-col gap-1 w-full">
       {label && (
-        <label
-          className={`text-sm font-medium ${
-            error ? "text-red-500" : "text-gray-700"
-          }`}
-        >
+        <label className={`text-sm font-medium ${error ? "text-red-500" : "text-gray-700"}`}>
           {label}
         </label>
       )}
@@ -56,8 +52,6 @@ const DatePicker: React.FC<DatePickerProps> = ({
 };
 
 export default DatePicker;
-
-
 
 // import React, { useState } from "react";
 // import DatePicker from "@divaastra/components/common/DatePicker";
