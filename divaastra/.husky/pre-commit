@@ -1,6 +1,9 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+echo "🔥 Husky pre-commit is running!"
+exit 1
+
 echo "🔍 Running lint-staged on staged files..."
 npx lint-staged || exit 1
 

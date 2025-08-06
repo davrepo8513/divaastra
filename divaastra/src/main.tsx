@@ -1,8 +1,8 @@
+import App from "@divaastra/App";
+import "@divaastra/index.css";
+import "@divaastra/index.scss";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "@divaastra/index.scss";
-import "@divaastra/index.css";
-import App from "@divaastra/App";
 
 // Ensure correct type for root element
 const rootElement = document.getElementById("root");
