@@ -1,8 +1,6 @@
 import React from "react";
-import { IconType } from "react-icons"; // Optional if using react-icons
 
-export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   error?: string;
   helperText?: string;
@@ -25,7 +23,7 @@ const Input: React.FC<InputProps> = ({
   prefixIcon,
   suffixIcon,
   borderColor = "border-gray-300",
-  placeholder = '',
+  placeholder = "",
   ...props
 }) => {
   const errorStyles = error
@@ -37,10 +35,7 @@ const Input: React.FC<InputProps> = ({
   return (
     <div className="flex flex-col gap-1" style={{ width }}>
       {label && (
-        <label
-          htmlFor={props.id}
-          className={`text-sm font-medium ${labelStyles}`}
-        >
+        <label htmlFor={props.id} className={`text-sm font-medium ${labelStyles}`}>
           {label}
         </label>
       )}
@@ -67,8 +62,8 @@ const Input: React.FC<InputProps> = ({
 
 export default Input;
 
-
-{/* <Input
+{
+  /* <Input
   id="username"
   label="Username"
   placeholder="Enter username"
@@ -80,4 +75,5 @@ export default Input;
   error={!username ? "Username is required" : ""}
   width="100%"
   height="45px"
-/>; */}
+/>; */
+}

@@ -56,11 +56,7 @@ const MultiSelectInput: React.FC<MultiSelectInputProps> = ({
   return (
     <div className="flex flex-col gap-1 relative w-full">
       {label && (
-        <label
-          className={`text-sm font-medium ${
-            error ? "text-red-500" : "text-gray-700"
-          }`}
-        >
+        <label className={`text-sm font-medium ${error ? "text-red-500" : "text-gray-700"}`}>
           {label}
         </label>
       )}
@@ -128,9 +124,7 @@ const MultiSelectInput: React.FC<MultiSelectInputProps> = ({
       )}
 
       {(helperText || error) && (
-        <p
-          className={`text-xs mt-1 ${error ? "text-red-500" : "text-gray-500"}`}
-        >
+        <p className={`text-xs mt-1 ${error ? "text-red-500" : "text-gray-500"}`}>
           {error || helperText}
         </p>
       )}
@@ -139,9 +133,6 @@ const MultiSelectInput: React.FC<MultiSelectInputProps> = ({
 };
 
 export default MultiSelectInput;
-
-
-
 
 // import React, { useState } from "react";
 // import MultiSelectInput, {

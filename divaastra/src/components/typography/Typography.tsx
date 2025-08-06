@@ -1,5 +1,5 @@
-import React, { JSX, ReactNode } from "react";
 import clsx from "clsx";
+import React, { JSX, ReactNode } from "react";
 
 type Variant =
   | "h1"
@@ -81,8 +81,6 @@ const Typography: React.FC<TypographyProps> = ({
 
 export default Typography;
 
-
-
 // Usage Examples:
 // tsx
 // Copy
@@ -98,11 +96,6 @@ export default Typography;
 // <Typography variant="caption" color="gray">
 //   © 2025 Divaastra Inc.
 // </Typography>
-
-
-
-
-
 
 // ✅ Features:
 // ✔️ Supports all header/body variants

@@ -1,5 +1,5 @@
-import React from "react";
 import clsx from "clsx";
+import React from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "outline" | "danger";
@@ -34,10 +34,7 @@ const Button: React.FC<ButtonProps> = ({
   };
 
   return (
-    <button
-      className={clsx(baseClasses, variants[variant], sizes[size], className)}
-      {...props}
-    >
+    <button className={clsx(baseClasses, variants[variant], sizes[size], className)} {...props}>
       {loading ? (
         <span className="animate-spin h-4 w-4 border-2 border-t-transparent rounded-full border-white mr-2"></span>
       ) : prefixIcon ? (

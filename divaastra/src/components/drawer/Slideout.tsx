@@ -1,5 +1,5 @@
-import React from "react";
 import { X } from "lucide-react";
+import React from "react";
 
 interface SlideoutProps {
   isOpen: boolean;
@@ -30,12 +30,7 @@ const Slideout: React.FC<SlideoutProps> = ({
   return (
     <>
       {/* Overlay */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
-          onClick={onClose}
-        />
-      )}
+      {isOpen && <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={onClose} />}
 
       {/* Drawer */}
       <div
@@ -45,12 +40,12 @@ const Slideout: React.FC<SlideoutProps> = ({
           isOpen
             ? "translate-x-0 translate-y-0"
             : position === "right"
-            ? "translate-x-full"
-            : position === "left"
-            ? "-translate-x-full"
-            : position === "top"
-            ? "-translate-y-full"
-            : "translate-y-full"
+              ? "translate-x-full"
+              : position === "left"
+                ? "-translate-x-full"
+                : position === "top"
+                  ? "-translate-y-full"
+                  : "translate-y-full"
         }`}
       >
         {/* Header */}
@@ -70,8 +65,6 @@ const Slideout: React.FC<SlideoutProps> = ({
 
 export default Slideout;
 
-
-
 // Right-side Drawer:
 // const [open, setOpen] = React.useState(false);
 
@@ -88,13 +81,10 @@ export default Slideout;
 //   </Slideout>
 // </>;
 
-
-
 // Left-side Drawer:
 // <Slideout isOpen={open} onClose={() => setOpen(false)} position="left" title="Menu">
 //   <p>Navigation items</p>
 // </Slideout>
-
 
 // Top Slideout:
 // <Slideout isOpen={open} onClose={() => setOpen(false)} position="top" height="h-1/3" title="Notifications">

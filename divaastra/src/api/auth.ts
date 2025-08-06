@@ -1,6 +1,6 @@
+import { LoginPayload } from "@divaastra/types/auth/login.type";
 import { RegisterPayload } from "@divaastra/types/auth/register.type";
 import api from "./axiosInstance";
-import { LoginPayload } from "@divaastra/types/auth/login.type";
 
 export const Login = async (payload: LoginPayload) => {
   const response = await api.post("/auth/login", payload);
@@ -11,10 +11,10 @@ export const Login = async (payload: LoginPayload) => {
 };
 
 export const Register = async (payload: RegisterPayload) => {
-      const response = await api.post("/auth/register", payload);
-      return response.data;
-}
+  const response = await api.post("/auth/register", payload);
+  return response.data;
+};
 
 export const Logout = () => {
-      localStorage.removeItem("token");
-}
+  localStorage.removeItem("token");
+};

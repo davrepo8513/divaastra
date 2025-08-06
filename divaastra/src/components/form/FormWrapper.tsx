@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  useForm,
-  FormProvider,
-  SubmitHandler,
-  FieldValues,
-  DefaultValues,
-} from "react-hook-form";
+import { DefaultValues, FieldValues, FormProvider, SubmitHandler, useForm } from "react-hook-form";
 
 interface FormWrapperProps<T extends FieldValues> {
   defaultValues: DefaultValues<T>;
@@ -26,10 +20,7 @@ function FormWrapper<T extends FieldValues>({
 
   return (
     <FormProvider {...methods}>
-      <form
-        onSubmit={methods.handleSubmit(onSubmit)}
-        className={`space-y-4 ${className || ""}`}
-      >
+      <form onSubmit={methods.handleSubmit(onSubmit)} className={`space-y-4 ${className || ""}`}>
         {children}
       </form>
     </FormProvider>
@@ -37,7 +28,6 @@ function FormWrapper<T extends FieldValues>({
 }
 
 export default FormWrapper;
-
 
 // Usage Example:
 
@@ -54,4 +44,3 @@ export default FormWrapper;
 //   <Input name="password" type="password" label="Password" />
 //   <button type="submit">Submit</button>
 // </FormWrapper>;
-    

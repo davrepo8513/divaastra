@@ -40,12 +40,9 @@
 
 // export default Tooltip;
 
-
 // // <Tooltip text="Click here to add item">
 // //   <button className="p-2 bg-blue-500 text-white rounded">Hover Me</button>
 // // </Tooltip>;
-
-
 
 import React, { useState } from "react";
 
@@ -100,10 +97,6 @@ const Tooltip: React.FC<TooltipProps> = ({
 
 export default Tooltip;
 
-
-
-
-
 // import { Info } from "lucide-react";
 // import Tooltip from "./Tooltip";
 
@@ -112,7 +105,6 @@ export default Tooltip;
 //   icon={<Info className="w-5 h-5 text-blue-500" />}
 //   position="right"
 // />;
-
 
 // Normal Tooltip wrapping a button:
 // <Tooltip text="Click to submit" position="top">

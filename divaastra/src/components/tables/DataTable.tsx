@@ -46,10 +46,7 @@ function DataTable<T>({ columns, data, pageSize = 5 }: DataTableProps<T>) {
         <button disabled={page === 1} onClick={() => setPage(page - 1)}>
           Prev
         </button>
-        <button
-          disabled={start + pageSize >= data.length}
-          onClick={() => setPage(page + 1)}
-        >
+        <button disabled={start + pageSize >= data.length} onClick={() => setPage(page + 1)}>
           Next
         </button>
       </div>

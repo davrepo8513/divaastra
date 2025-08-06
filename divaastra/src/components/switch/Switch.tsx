@@ -13,9 +13,7 @@ const Switch: React.FC<SwitchProps> = ({ checked, onChange }) => (
     onClick={onChange}
   >
     <div
-      className={`bg-white w-4 h-4 rounded-full shadow transform ${
-        checked ? "translate-x-6" : ""
-      }`}
+      className={`bg-white w-4 h-4 rounded-full shadow transform ${checked ? "translate-x-6" : ""}`}
     ></div>
   </div>
 );
