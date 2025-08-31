@@ -1,5 +1,5 @@
 // components/Dialog.tsx
-import Button from "@divaastra/components/buttons/Button";
+import Button from "@shieldspire/components/buttons/Button";
 import React from "react";
 
 interface DialogProps {

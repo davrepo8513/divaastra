@@ -1,4 +1,4 @@
-import { theme } from "@divaastra/utils/theme";
+import { theme } from "@shieldspire/utils/theme";
 import React from "react";
 import { ScatterBoxLoader } from "react-awesome-loaders";
 

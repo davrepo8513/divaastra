@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-100 text-gray-700 border-t mt-5">
+    <footer className="bg-gray-100 text-gray-700 border-t">
       <div className="mx-2 px-2 py-4 flex flex-col md:flex-row items-center justify-between">
         {/* Logo / Brand */}
         <Link to="/" className="text-lg font-bold text-indigo-600">
-          Divaastra
+          shieldspire
         </Link>
 
         {/* Links */}
@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
 
         {/* Copyright */}
         <p className="mt-3 md:mt-0 text-sm text-gray-500">
-          © {new Date().getFullYear()} Divaastra. All rights reserved.
+          © {new Date().getFullYear()} shieldspire. All rights reserved.
         </p>
       </div>
     </footer>

@@ -54,7 +54,7 @@ const DatePicker: React.FC<DatePickerProps> = ({
 export default DatePicker;
 
 // import React, { useState } from "react";
-// import DatePicker from "@divaastra/components/common/DatePicker";
+// import DatePicker from "@shieldspire/components/common/DatePicker";
 
 // const ExamplePage = () => {
 //   const [date, setDate] = useState<Date | null>(null);

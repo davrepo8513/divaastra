@@ -91,12 +91,12 @@
 // Edit
 // {/* Responsive by default */}
 // <Typography variant="h1" color="primary">
-//   Divaastra Social App
+//   shieldspire Social App
 // </Typography>
 
 // {/* Disable responsive (mobile/desktop same size) */}
 // <Typography variant="h2" color="secondary" responsive={false}>
-//   Welcome to Divaastra
+//   Welcome to shieldspire
 // </Typography>
 
 // {/* Subtitle with responsive size */}

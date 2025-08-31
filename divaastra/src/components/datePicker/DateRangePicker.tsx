@@ -57,7 +57,7 @@ const DateRangePicker: React.FC<DateRangePickerProps> = ({
 export default DateRangePicker;
 
 // import React, { useState } from "react";
-// import DateRangePicker from "@divaastra/components/common/DateRangePicker";
+// import DateRangePicker from "@shieldspire/components/common/DateRangePicker";
 
 // const ExamplePage = () => {
 //   const [dates, setDates] = useState<[Date | null, Date | null]>([null, null]);

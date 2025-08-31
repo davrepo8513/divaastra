@@ -6,15 +6,15 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@divaastra": path.resolve(__dirname, "src"),
+      "@shieldspire": path.resolve(__dirname, "src"),
     },
   },
   css: {
     preprocessorOptions: {
       scss: {
         additionalData: `
-          @use "@divaastra/styles/variables" as *;
-          @use "@divaastra/styles/mixins" as *;
+          @use "@shieldspire/styles/variables" as *;
+          @use "@shieldspire/styles/mixins" as *;
         `,
       },
     },

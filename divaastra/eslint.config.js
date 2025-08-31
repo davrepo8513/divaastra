@@ -1,13 +1,13 @@
 import js from "@eslint/js";
-import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
-import tseslint from "typescript-eslint";
 import { defineConfig, globalIgnores } from "eslint/config";
+import globals from "globals";
+import tseslint from "typescript-eslint";
 
 export default defineConfig([
   globalIgnores(["dist"]),
-  // ✅ For JavaScript/JSX files
+  //For JavaScript/JSX files
   {
     files: ["**/*.{js,jsx}"],
     extends: [
@@ -28,7 +28,7 @@ export default defineConfig([
       "no-unused-vars": ["error", { varsIgnorePattern: "^[A-Z_]" }],
     },
   },
-  // ✅ For TypeScript/TSX files
+  //For TypeScript/TSX files
   {
     files: ["src/**/*.{ts,tsx}"],
     languageOptions: {
@@ -48,7 +48,7 @@ export default defineConfig([
     },
     rules: {
       "no-unused-vars": ["error", { varsIgnorePattern: "^[A-Z_]" }],
-      // ✅ Restrict imports to enforce @divaastra/*
+      //Restrict imports to enforce @shieldspire/*
       "no-restricted-imports": [
         "error",
         {

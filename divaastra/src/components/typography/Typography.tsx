@@ -86,7 +86,7 @@ export default Typography;
 // Copy
 // Edit
 // <Typography variant="h1" color="primary">
-//   Divaastra Social App
+//   shieldspire Social App
 // </Typography>
 
 // <Typography variant="subtitle" align="center">
@@ -94,7 +94,7 @@ export default Typography;
 // </Typography>
 
 // <Typography variant="caption" color="gray">
-//   © 2025 Divaastra Inc.
+//   © 2025 shieldspire Inc.
 // </Typography>
 
 // ✅ Features:

@@ -1,5 +1,5 @@
-import { LoginPayload } from "@divaastra/types/auth/login.type";
-import { RegisterPayload } from "@divaastra/types/auth/register.type";
+import { LoginPayload } from "@shieldspire/types/auth/login.type";
+import { RegisterPayload } from "@shieldspire/types/auth/register.type";
 
 export interface AuthContextType {
   token: string | null;

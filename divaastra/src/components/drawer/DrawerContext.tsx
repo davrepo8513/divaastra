@@ -1,4 +1,4 @@
-import Slideout from "@divaastra/components/drawer/Slideout";
+import Slideout from "@shieldspire/components/drawer/Slideout";
 import React, { createContext, ReactNode, useContext, useState } from "react";
 
 interface DrawerContent {

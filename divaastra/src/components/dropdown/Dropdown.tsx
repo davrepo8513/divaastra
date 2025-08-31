@@ -3,7 +3,7 @@ import React, { useState } from "react";
 export interface DropdownOption {
   label: string;
   value: string;
-  icon?: React.ReactNode; // ✅ Optional icon
+  icon?: React.ReactNode;
 }
 
 export interface DropdownProps {
@@ -15,8 +15,9 @@ export interface DropdownProps {
   error?: string;
   helperText?: string;
   className?: string;
-  showIcons?: boolean; // ✅ Toggle icons
+  showIcons?: boolean;
   disabled?: boolean;
+  width?: string;
 }
 
 const Dropdown: React.FC<DropdownProps> = ({
@@ -30,13 +31,14 @@ const Dropdown: React.FC<DropdownProps> = ({
   className = "",
   showIcons = true,
   disabled = false,
+  width = "100%",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const selectedOption = options.find((o) => o.value === value);
 
   return (
-    <div className="flex flex-col gap-1 w-full relative">
+    <div className="flex flex-col gap-1 w-full relative" style={{ width: `${width}` }}>
       {label && (
         <label className={`text-sm font-medium ${error ? "text-red-500" : "text-gray-700"}`}>
           {label}

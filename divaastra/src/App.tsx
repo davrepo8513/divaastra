@@ -1,44 +1,59 @@
-import "@divaastra/App.scss";
-import ErrorBoundary from "@divaastra/components/errorBoundary/ErrorBoundary";
-import Footer from "@divaastra/components/footer/Footer";
-import FuturisticLoader from "@divaastra/components/loaders/FuturisticLoader";
-import Navbar from "@divaastra/components/navbar/Navbar";
-import { AuthProvider } from "@divaastra/contexts/AuthContext";
-import AppRouter from "@divaastra/routes/Router";
-import IMAGES from "@divaastra/utils/constants/images";
+import "@shieldspire/App.scss";
+import ErrorBoundary from "@shieldspire/components/errorBoundary/ErrorBoundary";
+import FuturisticLoader from "@shieldspire/components/loaders/FuturisticLoader";
+import { AuthProvider, useAuth } from "@shieldspire/contexts/AuthContext";
+import LoginForm from "@shieldspire/pages/auth/Login";
+import AppRouter from "@shieldspire/routes/Router";
+import IMAGES from "@shieldspire/utils/constants/images";
 import React, { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
+import { Layout } from "./pages/layout/Layout";
 
-const App: React.FC = () => {
+const AppContent: React.FC = () => {
+  const { isAuthenticated } = useAuth();
   const [loading, setLoading] = useState(true);
 
-  // Preload images at startup
-  Object.values(IMAGES).forEach((src) => {
-    const img = new Image();
-    img.src = src;
-  });
+  useEffect(() => {
+    Object.values(IMAGES).forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3000);
+    const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) {
-    return <FuturisticLoader />;
+  if (loading) return <FuturisticLoader />;
+
+  if (!isAuthenticated) {
+    return (
+      <div className="shieldspire__login-wrapper">
+        <LoginForm />
+      </div>
+    );
   }
 
   return (
-    <div className="divaastra__application-wrapper">
+    <>
+      <Layout>
+        <div className="shieldspire__pages-wrapper">
+          <ErrorBoundary>
+            <AppRouter />
+          </ErrorBoundary>
+        </div>
+      </Layout>
+    </>
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <div className="shieldspire__application-wrapper">
       <AuthProvider>
-        {" "}
         <BrowserRouter>
-          <Navbar />
-          <div className="divaastra__pages-wrapper">
-            <ErrorBoundary>
-              <AppRouter />
-            </ErrorBoundary>
-          </div>
-          <Footer />
+          <AppContent />
         </BrowserRouter>
       </AuthProvider>
     </div>

@@ -3,7 +3,7 @@
  * https://jestjs.io/docs/configuration
  */
 
-import type {Config} from 'jest';
+import type { Config } from "jest";
 
 const config: Config = {
   // All imported modules in your tests should be mocked automatically
@@ -22,7 +22,7 @@ const config: Config = {
   },
   moduleNameMapper: {
     "\\.(css|scss)$": "identity-obj-proxy",
-    "^@divaastra/(.*)$": "<rootDir>/src/$1"
+    "^@shieldspire/(.*)$": "<rootDir>/src/$1",
   },
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   clearMocks: true,

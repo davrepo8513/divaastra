@@ -1,5 +1,5 @@
+import App from "@shieldspire/App";
 import { cleanup, render, screen } from "@testing-library/react";
-import App from "@divaastra/App";
 import { act } from "react";
 
 jest.useFakeTimers();

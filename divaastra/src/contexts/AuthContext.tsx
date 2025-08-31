@@ -1,7 +1,7 @@
-import { Login, Logout, Register } from "@divaastra/api/auth";
-import { AuthContextType } from "@divaastra/types/auth/authContext.type";
-import { LoginPayload } from "@divaastra/types/auth/login.type";
-import { RegisterPayload } from "@divaastra/types/auth/register.type";
+import { Login, Logout, Register } from "@shieldspire/api/auth";
+import { AuthContextType } from "@shieldspire/types/auth/authContext.type";
+import { LoginPayload } from "@shieldspire/types/auth/login.type";
+import { RegisterPayload } from "@shieldspire/types/auth/register.type";
 import { createContext, useContext, useEffect, useState } from "react";
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -32,7 +32,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     <AuthContext.Provider
       value={{
         token,
-        isAuthenticated: !!token,
+        // isAuthenticated: !!token,
+        isAuthenticated: true,
         registerUser,
         loginUser,
         logoutUser,

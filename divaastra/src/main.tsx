@@ -1,6 +1,6 @@
-import App from "@divaastra/App";
-import "@divaastra/index.css";
-import "@divaastra/index.scss";
+import App from "@shieldspire/App";
+import "@shieldspire/index.css";
+import "@shieldspire/index.scss";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 

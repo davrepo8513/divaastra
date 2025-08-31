@@ -4,7 +4,7 @@
     <metrics statements="162" coveredstatements="162" conditionals="13" coveredconditionals="13" methods="9" coveredmethods="7" elements="184" coveredelements="182" complexity="0" loc="162" ncloc="162" packages="7" files="9" classes="9"/>
     <package name="src">
       <metrics statements="33" coveredstatements="33" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
-      <file name="App.tsx" path="/home/dmtavs/projects/divaastra/divaastra-fe/divaastra/src/App.tsx">
+      <file name="App.tsx" path="/home/dmtavs/projects/shieldspire/shieldspire-fe/shieldspire/src/App.tsx">
         <metrics statements="33" coveredstatements="33" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -43,7 +43,7 @@
     </package>
     <package name="src.components.footer">
       <metrics statements="35" coveredstatements="35" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <file name="Footer.tsx" path="/home/dmtavs/projects/divaastra/divaastra-fe/divaastra/src/components/footer/Footer.tsx">
+      <file name="Footer.tsx" path="/home/dmtavs/projects/shieldspire/shieldspire-fe/shieldspire/src/components/footer/Footer.tsx">
         <metrics statements="35" coveredstatements="35" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -84,7 +84,7 @@
     </package>
     <package name="src.components.loaders">
       <metrics statements="28" coveredstatements="28" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <file name="app-loader.tsx" path="/home/dmtavs/projects/divaastra/divaastra-fe/divaastra/src/components/loaders/app-loader.tsx">
+      <file name="app-loader.tsx" path="/home/dmtavs/projects/shieldspire/shieldspire-fe/shieldspire/src/components/loaders/app-loader.tsx">
         <metrics statements="28" coveredstatements="28" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -118,7 +118,7 @@
     </package>
     <package name="src.components.navbar">
       <metrics statements="35" coveredstatements="35" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
-      <file name="Navbar.tsx" path="/home/dmtavs/projects/divaastra/divaastra-fe/divaastra/src/components/navbar/Navbar.tsx">
+      <file name="Navbar.tsx" path="/home/dmtavs/projects/shieldspire/shieldspire-fe/shieldspire/src/components/navbar/Navbar.tsx">
         <metrics statements="35" coveredstatements="35" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -159,17 +159,17 @@
     </package>
     <package name="src.pages">
       <metrics statements="6" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="1"/>
-      <file name="About.tsx" path="/home/dmtavs/projects/divaastra/divaastra-fe/divaastra/src/pages/About.tsx">
+      <file name="About.tsx" path="/home/dmtavs/projects/shieldspire/shieldspire-fe/shieldspire/src/pages/About.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
       </file>
-      <file name="Home.tsx" path="/home/dmtavs/projects/divaastra/divaastra-fe/divaastra/src/pages/Home.tsx">
+      <file name="Home.tsx" path="/home/dmtavs/projects/shieldspire/shieldspire-fe/shieldspire/src/pages/Home.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="2" count="1" type="stmt"/>
       </file>
-      <file name="NotFound.tsx" path="/home/dmtavs/projects/divaastra/divaastra-fe/divaastra/src/pages/NotFound.tsx">
+      <file name="NotFound.tsx" path="/home/dmtavs/projects/shieldspire/shieldspire-fe/shieldspire/src/pages/NotFound.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -177,7 +177,7 @@
     </package>
     <package name="src.routes">
       <metrics statements="17" coveredstatements="17" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <file name="Router.tsx" path="/home/dmtavs/projects/divaastra/divaastra-fe/divaastra/src/routes/Router.tsx">
+      <file name="Router.tsx" path="/home/dmtavs/projects/shieldspire/shieldspire-fe/shieldspire/src/routes/Router.tsx">
         <metrics statements="17" coveredstatements="17" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -200,7 +200,7 @@
     </package>
     <package name="src.utils">
       <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="theme.ts" path="/home/dmtavs/projects/divaastra/divaastra-fe/divaastra/src/utils/theme.ts">
+      <file name="theme.ts" path="/home/dmtavs/projects/shieldspire/shieldspire-fe/shieldspire/src/utils/theme.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>

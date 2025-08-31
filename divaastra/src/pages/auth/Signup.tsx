@@ -4,7 +4,7 @@ const Signup: React.FC = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-50">
       <div className="bg-white border border-gray-300 p-6 rounded-md shadow-md max-w-sm w-full">
-        <h1 className="text-3xl font-logo text-center mb-6">Divaastra</h1>
+        <h1 className="text-3xl font-logo text-center mb-6">shieldspire</h1>
         <p className="text-gray-500 text-center text-sm mb-4">
           Sign up to see photos and videos from your friends.
         </p>

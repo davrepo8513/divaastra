@@ -1,6 +1,6 @@
-import Input from "@divaastra/components/input/Input";
-import { useAuth } from "@divaastra/contexts/AuthContext";
-import { LoginPayload } from "@divaastra/types/auth/login.type";
+import Input from "@shieldspire/components/input/Input";
+import { useAuth } from "@shieldspire/contexts/AuthContext";
+import { LoginPayload } from "@shieldspire/types/auth/login.type";
 import React, { useState } from "react";
 import Style from "./Login.module.scss";
 

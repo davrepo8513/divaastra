@@ -1,4 +1,4 @@
-import styles from "@divaastra/components/loaders/FuturisticLoader.module.scss";
+import styles from "@shieldspire/components/loaders/FuturisticLoader.module.scss";
 import { useEffect, useRef } from "react";
 
 const FuturisticLoader = () => {
@@ -21,7 +21,7 @@ const FuturisticLoader = () => {
   }, []);
 
   return (
-    <div className={styles["divaastra__loader-wrapper"]}>
+    <div className={styles["shieldspire__loader-wrapper"]}>
       <div className={styles.loader}>
         <div className={styles.orb} />
         <div className={`${styles.ring} ${styles.ring1}`} />

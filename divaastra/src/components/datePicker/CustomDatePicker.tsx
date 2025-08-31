@@ -76,7 +76,7 @@
 // export default DatePicker;
 
 // import React, { useState } from "react";
-// import DatePicker from "@divaastra/components/common/DatePicker";
+// import DatePicker from "@shieldspire/components/common/DatePicker";
 
 // const ExampleRange = () => {
 //   const [range, setRange] = useState<[Date | null, Date | null]>([null, null]);
@@ -99,7 +99,7 @@
 
 // Single Date Picker:
 // import React, { useState } from "react";
-// import DatePicker from "@divaastra/components/common/DatePicker";
+// import DatePicker from "@shieldspire/components/common/DatePicker";
 
 // const ExampleSingle = () => {
 //   const [date, setDate] = useState<Date | null>(null);
